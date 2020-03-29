@@ -22,7 +22,7 @@ p, .description{
 }
 
 #container{
-  width: 90%;
+  width: 80%;
   max-width: 980px;
   margin: 40px auto;
   display: flex;
@@ -48,6 +48,7 @@ button {
   font-weight: bold;
   background: none;
   color: #FF5E84;
+  
   cursor: pointer;
   outline: none;
   
@@ -124,7 +125,7 @@ footer a{
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: center; /*tirar? */
   justify-content: center;
   transition: 400ms;
 }
@@ -185,7 +186,7 @@ form a{
   border-radius: 6px;
 
   align-self: end;
-  justify-self: end;
+  /* justify-self: end; */
 
   transition: 400ms;
 }
