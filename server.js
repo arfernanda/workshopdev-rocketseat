@@ -37,15 +37,26 @@ server.use(express.static("public"))
 const nunjucks = require("nunjucks")
 nunjucks.configure("views", {
   express: server,
-  noCache: true
+  noCache: true,
 })
 
 server.get("/", function (req, res) {
-  return res.render("index.html", { ideas })
+  const reversedIdeas = [...ideas].reverse()
+
+  let lastIdeas = []
+  for (let idea of reversedIdeas) {
+    if (lastIdeas.length < 2) {
+      lastIdeas.push(idea)
+    }
+  }
+
+  return res.render("index.html", { ideas: lastIdeas })
 })
 
 server.get("/ideias", function (req, res) {
-  return res.render("ideias.html")
+  const reversedIdeas = [...ideas].reverse()
+
+  return res.render("ideias.html", { ideas: reversedIdeas })
 })
 
 server.listen(3000)
