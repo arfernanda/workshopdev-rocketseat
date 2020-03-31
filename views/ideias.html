@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <title>Ideias – Casa Criativa</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  {% include "head.html" %}
 
 </head>
 
@@ -29,23 +28,7 @@
 
     <main>
       <section id="ideas">
-
-        {%  for idea in ideas %}
-
-        <div class="idea">
-          <img src="{{idea.img}}" alt="imagem de {{idea.title}}">
-          <div class="content">
-            <h3> {{idea.title}} </h3>
-            <p>{{idea.category}}</p>
-            <div class="description">
-              {{idea.description}}
-            </div>
-            <a href="{{idea.url}}" target="_blank">Ir para ideia</a>
-          </div>
-        </div>
-
-        {%  endfor %}
-
+        {% include "all_ideas.html" %}
       </section>
     </main>
     <footer>
