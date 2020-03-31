@@ -30,6 +30,20 @@ const ideas = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae inventore reiciendis laboriosam nesciunt accusamus quo delectus repudiandae",
     url: "https://www.google.com/"
   },
+  {
+    img: "https://image.flaticon.com/icons/svg/2729/2729038.svg",
+    title: "Pintura",
+    category: "Criatividade",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae inventore reiciendis laboriosam nesciunt accusamus quo delectus repudiandae",
+    url: "https://www.google.com/"
+  },
+  {
+    img: "https://image.flaticon.com/icons/svg/2729/2729048.svg",
+    title: "Artesanato",
+    category: "Criatividade",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae inventore reiciendis laboriosam nesciunt accusamus quo delectus repudiandae",
+    url: "https://www.google.com/"
+  },
 ]
 
 server.use(express.static("public"))
